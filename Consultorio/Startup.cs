@@ -28,6 +28,7 @@ namespace Consultorio
         {
 
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consultorio", Version = "v1" });
@@ -53,6 +54,13 @@ namespace Consultorio
             var stringConexao = Configuration.GetConnectionString("App");
 
             app.UseAuthorization();
+
+            app.UseCors(
+                x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                );
 
             app.UseEndpoints(endpoints =>
             {
