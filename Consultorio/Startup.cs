@@ -48,6 +48,10 @@ namespace Consultorio
 
             app.UseRouting();
 
+            var nomeCanal = Configuration["NomeCriador"];
+
+            var stringConexao = Configuration.GetConnectionString("App");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
