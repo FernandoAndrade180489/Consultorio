@@ -1,4 +1,6 @@
 using Consultorio.Context;
+using Consultorio.Repository;
+using Consultorio.Repository.Interfaces;
 using Consultorio.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +32,16 @@ namespace Consultorio
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            // Instalar e Adicionar configuração do NewtonsoftJson para corrigir referencia circular de resultados.
+            services.AddControllers().AddNewtonsoftJson(options => {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+
+            // registrando a injeção de dependência no Scopo da aplicação
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IBaseRepository, BaseRepository>();
+            services.AddScoped<IPacienteRepository, PacienteRepository>();
+
             services.AddDbContext<ConsultorioContext>(options =>
             {
                 options.UseNpgsql(Configuration.GetConnectionString("Default"),
@@ -40,10 +51,7 @@ namespace Consultorio
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consultorio", Version = "v1" });
-            });
-
-            // registrando a injeção de dependência no Scopo da aplicação
-            services.AddScoped<IEmailService, EmailService>();
+            });            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
