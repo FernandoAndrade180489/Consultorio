@@ -4,6 +4,7 @@ using Consultorio.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Consultorio.Repository
 {
@@ -16,15 +17,17 @@ namespace Consultorio.Repository
             _context = context;
         }
 
-        public IEnumerable<Paciente> GetPacientes()
+        public async Task<IEnumerable<Paciente>> GetPacientesAsync()
         {
             // Include Consultas para trazer as consultas viculadas ao paciente usando EntityFramework
-            return _context.Pacientes.Include(x => x.Consultas).ToList();
+            return await _context.Pacientes
+                .Include(x => x.Consultas).ToListAsync();
         }
 
-        public Paciente GetPacientesById(int id)
+        public async Task<Paciente> GetPacientesByIdAsync(int id)
         {
-            return _context.Pacientes.Where(x => x.Id == id).Include(x => x.Consultas).FirstOrDefault();
+            return await _context.Pacientes
+                .Where(x => x.Id == id).Include(x => x.Consultas).FirstOrDefaultAsync();
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿using Consultorio.Models.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Consultorio.Repository.Interfaces
 {
     public interface IPacienteRepository : IBaseRepository
     {
-        IEnumerable<Paciente> GetPacientes();
+        Task<IEnumerable<Paciente>> GetPacientesAsync();
 
-        Paciente GetPacientesById(int id);
+        Task<Paciente> GetPacientesByIdAsync(int id);
     }
 }
