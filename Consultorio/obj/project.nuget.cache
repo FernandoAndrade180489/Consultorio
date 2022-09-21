@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IyEf1HXn2D0sm4PZXjwjU0SrnmMj4gluOvjYjkVlcdZMGLXjoNfueCifHmiG721KVV/PxppdXOU7Y6vzFEeZ/Q==",
+  "dgSpecHash": "0CusqXqCWln2lm6mzwryauJ0UuneTiDbgUUgCMwXxXZU/cFw8Zj6/xXOYaSirBqlTakrKuIlWssprexwHVj4MQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\fernando.andrade\\Documents\\Projects\\Consultorio\\Consultorio\\Consultorio.csproj",
   "expectedPackageFiles": [
@@ -19,13 +19,16 @@
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.10\\npgsql.entityframeworkcore.postgresql.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": [
     {
