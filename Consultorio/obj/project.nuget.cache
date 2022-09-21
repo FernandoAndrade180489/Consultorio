@@ -1,13 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "0CusqXqCWln2lm6mzwryauJ0UuneTiDbgUUgCMwXxXZU/cFw8Zj6/xXOYaSirBqlTakrKuIlWssprexwHVj4MQ==",
+  "dgSpecHash": "bjYa7kJ1uSgKXh+usis/AKYRBX8LrWRSzb8fE8k2zb7rjcQVv6VErz9AIa6d7weGTcBBH2MJiebONx/j5bO5Iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\fernando.andrade\\Documents\\Projects\\Consultorio\\Consultorio\\Consultorio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.10\\microsoft.entityframeworkcore.design.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.10\\microsoft.entityframeworkcore.relational.5.0.10.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.10\\microsoft.entityframeworkcore.tools.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
