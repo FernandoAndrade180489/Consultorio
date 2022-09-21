@@ -14,7 +14,7 @@ namespace Consultorio.Map
         {
             base.Configure(builder);
 
-            builder.Property(x => x.Status).HasColumnName("status").HasDefaultValue(1);
+            builder.Property(x => x.Status).HasColumnName("status");
             builder.Property(x => x.Preco).HasColumnName("preco").HasPrecision(7, 2);
             builder.Property(x => x.DataHorario).HasColumnName("data_horario").IsRequired();
 
