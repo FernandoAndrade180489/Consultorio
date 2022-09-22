@@ -76,7 +76,7 @@ namespace Consultorio.Controllers
             if (id <= 0) return BadRequest("Paciente não informado");
 
             var pacienteBanco = await _repository.GetPacientesByIdAsync(id);
-            if (pacienteBanco == null) return BadRequest("Paciente não encontrado");
+            if (pacienteBanco == null) return NotFound("Paciente não encontrado");
 
             var pacienteAtualizar = _mapper.Map(paciente, pacienteBanco);
 
@@ -87,6 +87,21 @@ namespace Consultorio.Controllers
             return await _repository.SaveChangesAsync()
                 ? Ok(pacienteRetorno)
                 : BadRequest("Erro ao atualizar o paciente");
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id <= 0) return BadRequest("Paciente não informado");
+
+            var pacienteBanco = await _repository.GetPacientesByIdAsync(id);
+            if (pacienteBanco == null) return NotFound("Paciente não encontrado");
+
+            _repository.Delete(pacienteBanco);
+
+            return await _repository.SaveChangesAsync()
+                ? Ok("Paciente removido com sucesso")
+                : BadRequest("Erro ao remover o paciente");
         }
 
     }
