@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5eqsE5lqgFBARr7RkF/CPwljltEzlaouyIwGrW1nFhomWdh99qCy2AEd8j3mMGP/x+7Pg8M9RLqM+ItdNg2PMQ==",
+  "dgSpecHash": "hMLPco0pKZUqDUlxBEsmRs/BApsFVnf15RfgtUsJiVFt+r8pt3fKImO07cNElGUScag/ubQ76p0cGh+cJlnkkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\fernando.andrade\\Documents\\Projects\\Consultorio\\Consultorio\\Consultorio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.10\\microsoft.aspnetcore.jsonpatch.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.10\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.10.nupkg.sha512",
@@ -36,6 +38,7 @@
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": [

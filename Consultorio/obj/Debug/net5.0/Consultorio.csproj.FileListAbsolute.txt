@@ -39,3 +39,5 @@ C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\n
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

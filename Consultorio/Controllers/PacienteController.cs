@@ -1,4 +1,5 @@
-﻿using Consultorio.Models.Dtos;
+﻿using AutoMapper;
+using Consultorio.Models.Dtos;
 using Consultorio.Models.Entities;
 using Consultorio.Repository.Interfaces;
 using Consultorio.Services;
@@ -43,14 +44,11 @@ namespace Consultorio.Controllers
         {
             var paciente = await _repository.GetPacientesByIdAsync(id);
 
-            var pacienteRetorno = new PacienteDetalhesDto
-            {
-                Id = paciente.Id,
-                Nome = paciente.Nome,
-                Celular = paciente.Celular,
-                Email = paciente.Email,
-                Consultas = new List<Consulta>()
-            };
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Paciente, PacienteDetalhesDto>());
+
+            var mapper = new Mapper(config);
+
+            var pacienteRetorno = mapper.Map<PacienteDetalhesDto>(paciente);
 
             return pacienteRetorno != null
                 ? Ok(pacienteRetorno)
