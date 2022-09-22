@@ -1,5 +1,6 @@
 ﻿using Consultorio.Context;
 using Consultorio.Repository.Interfaces;
+using System.Threading.Tasks;
 
 namespace Consultorio.Repository
 {
@@ -13,7 +14,7 @@ namespace Consultorio.Repository
         }
         public void Add<T>(T entity) where T : class
         {
-            throw new System.NotImplementedException();
+            _context.Add(entity);
         }
 
         public void Delete<T>(T entity) where T : class
@@ -21,9 +22,9 @@ namespace Consultorio.Repository
             throw new System.NotImplementedException();
         }
 
-        public bool SaveChanges()
+        public async Task<bool> SaveChangesAsync()
         {
-            throw new System.NotImplementedException();
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public void Update<T>(T entity) where T : class
