@@ -16,10 +16,12 @@ namespace Consultorio.Controllers
     public class PacienteController : ControllerBase    
     {
         private readonly IPacienteRepository _repository;
+        private readonly IMapper _mapper;
 
-        public PacienteController(IPacienteRepository repository)   
+        public PacienteController(IPacienteRepository repository, IMapper mapper)   
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -42,13 +44,9 @@ namespace Consultorio.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var paciente = await _repository.GetPacientesByIdAsync(id);
+            var paciente = await _repository.GetPacientesByIdAsync(id);            
 
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Paciente, PacienteDetalhesDto>());
-
-            var mapper = new Mapper(config);
-
-            var pacienteRetorno = mapper.Map<PacienteDetalhesDto>(paciente);
+            var pacienteRetorno = _mapper.Map<PacienteDetalhesDto>(paciente);
 
             return pacienteRetorno != null
                 ? Ok(pacienteRetorno)

@@ -38,6 +38,7 @@ namespace Consultorio
             });
 
             // registrando a injeção de dependência no Scopo da aplicação
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IBaseRepository, BaseRepository>();
             services.AddScoped<IPacienteRepository, PacienteRepository>();
