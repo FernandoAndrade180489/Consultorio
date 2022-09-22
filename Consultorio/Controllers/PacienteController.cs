@@ -1,4 +1,5 @@
-﻿using Consultorio.Models.Entities;
+﻿using Consultorio.Models.Dtos;
+using Consultorio.Models.Entities;
 using Consultorio.Repository.Interfaces;
 using Consultorio.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +25,16 @@ namespace Consultorio.Controllers
         public async Task<IActionResult> Get()
         {
             var pacientes = await _repository.GetPacientesAsync();
-            return pacientes.Any() 
-                ? Ok(pacientes)
+
+            List<PacienteDto> pacientesRetorno = new List<PacienteDto>();
+
+            foreach (var paciente in pacientes)
+            {
+                pacientesRetorno.Add(new PacienteDto { Id = paciente.Id, Nome = paciente.Nome });
+            }
+
+            return pacientesRetorno.Any() 
+                ? Ok(pacientesRetorno)
                 : BadRequest("Paciente não encontrado.");
         }
 
@@ -33,8 +42,18 @@ namespace Consultorio.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var paciente = await _repository.GetPacientesByIdAsync(id);
-            return paciente != null
-                ? Ok(paciente)
+
+            var pacienteRetorno = new PacienteDetalhesDto
+            {
+                Id = paciente.Id,
+                Nome = paciente.Nome,
+                Celular = paciente.Celular,
+                Email = paciente.Email,
+                Consultas = new List<Consulta>()
+            };
+
+            return pacienteRetorno != null
+                ? Ok(pacienteRetorno)
                 : BadRequest("Paciente não encontrado.");
         }
 

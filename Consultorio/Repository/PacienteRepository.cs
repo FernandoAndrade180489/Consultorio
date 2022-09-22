@@ -21,7 +21,8 @@ namespace Consultorio.Repository
         {
             // Include Consultas para trazer as consultas viculadas ao paciente usando EntityFramework
             return await _context.Pacientes
-                .Include(x => x.Consultas).ToListAsync();
+                .Select(x => new Paciente {Id = x.Id, Nome = x.Nome })  // diminui a carga de dados vinda do banco - posso retornar o pacienteDto aqui se quiser ao invés de usar na Controller
+                .ToListAsync();
         }
 
         public async Task<Paciente> GetPacientesByIdAsync(int id)
