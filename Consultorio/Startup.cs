@@ -42,6 +42,7 @@ namespace Consultorio
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IBaseRepository, BaseRepository>();
             services.AddScoped<IPacienteRepository, PacienteRepository>();
+            services.AddScoped<IProfissionalRepository, ProfissionalRepository>();
 
             services.AddDbContext<ConsultorioContext>(options =>
             {

@@ -2,6 +2,7 @@
 using Consultorio.Models.Dtos;
 using Consultorio.Models.Entities;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+using System.Linq;
 
 namespace Consultorio.Helpers
 {
@@ -25,6 +26,11 @@ namespace Consultorio.Helpers
 
             CreateMap<PacienteAtualizarDto, Paciente>()
                 .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null)); // Fazer o mapeamento apenas se os membros forem diferentes de null e mantém os nulos
+
+            CreateMap<Profissional, ProfissionalDetalhesDto>()
+                .ForMember(dest => dest.TotalConsultas, opt => opt.MapFrom(src => src.Consultas.Count()))
+                .ForMember(dest => dest.Especialidades, opt => opt.MapFrom(src => 
+                src.Especialidades.Select(x => x.Nome).ToArray()));
         }
     }
 }
