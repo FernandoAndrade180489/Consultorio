@@ -31,6 +31,11 @@ namespace Consultorio.Helpers
                 .ForMember(dest => dest.TotalConsultas, opt => opt.MapFrom(src => src.Consultas.Count()))
                 .ForMember(dest => dest.Especialidades, opt => opt.MapFrom(src => 
                 src.Especialidades.Select(x => x.Nome).ToArray()));
+
+            CreateMap<ProfissionalAdicionarDto, Profissional>();
+
+            CreateMap<ProfissionalAtualizarDto, Profissional>()
+                .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null)); // Fazer o mapeamento apenas se os membros forem diferentes de null e mantém os nulos
         }
     }
 }
