@@ -48,6 +48,9 @@ namespace Consultorio.Controllers
 
             var pacienteRetorno = _mapper.Map<PacienteDetalhesDto>(paciente);
 
+            // Mapeamento reverso
+            var pacienteTeste = _mapper.Map<Paciente>(pacienteRetorno);
+
             return pacienteRetorno != null
                 ? Ok(pacienteRetorno)
                 : BadRequest("Paciente não encontrado.");

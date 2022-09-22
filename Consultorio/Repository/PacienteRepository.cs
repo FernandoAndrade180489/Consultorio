@@ -28,7 +28,10 @@ namespace Consultorio.Repository
         public async Task<Paciente> GetPacientesByIdAsync(int id)
         {
             return await _context.Pacientes
-                .Where(x => x.Id == id).Include(x => x.Consultas).FirstOrDefaultAsync();
+                .Include(x => x.Consultas)
+                .ThenInclude(c => c.Especialidade)
+                .ThenInclude(c => c.Profissionais)
+                .Where(x => x.Id == id).FirstOrDefaultAsync();
         }
     }
 }
