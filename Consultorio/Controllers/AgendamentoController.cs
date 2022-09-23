@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Consultorio.Models.Dtos;
+using Consultorio.Models.Entities;
 using Consultorio.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,6 +44,42 @@ namespace Consultorio.Controllers
             return consultaRetorno != null
                 ? Ok(consultaRetorno)
                 : NotFound("Nenhuma consulta encontrada.");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(ConsultaAdicionarDto consulta)
+        {
+            if (consulta == null) return BadRequest("Dados inválidos");
+
+            var consultaAdicionar = _mapper.Map<Consulta>(consulta);
+
+            _repository.Add(consultaAdicionar);
+
+            return await _repository.SaveChangesAsync()
+                ? Ok("Consulta agendada")
+                : BadRequest("Erro ao agendar consulta");
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, ConsultaAtualizarDto consulta)
+        {
+            if (id <= 0) return BadRequest("Dados inválidos");
+
+            var consultaBanco = await _repository.GetConsultaById(id);
+            if(consultaBanco == null) return BadRequest("Consulta não existe na base de dados");
+
+            // verifica se a consulta esta vazia
+            if(consulta.DataHorario == new DateTime()) consulta.DataHorario = consultaBanco.DataHorario;
+  
+            if(consulta.ProfissionalId <= 0) consulta.ProfissionalId = consultaBanco.ProfissionalId;      
+            
+            var consultaAtualizar = _mapper.Map(consulta, consultaBanco);
+
+            _repository.Update(consultaAtualizar);
+
+            return await _repository.SaveChangesAsync()
+                ? Ok("Agendamento atualizado")
+                : BadRequest("Erro ao atualizar agendamento");
         }
     }
 }

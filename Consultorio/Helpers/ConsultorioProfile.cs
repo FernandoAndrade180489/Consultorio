@@ -24,6 +24,9 @@ namespace Consultorio.Helpers
                 .ForMember(dest => dest.Profissional, opt => opt.MapFrom(src => src.Profissional.Nome));
 
             CreateMap<Consulta, ConsultaDetalhesDto>();
+            CreateMap<ConsultaAdicionarDto, Consulta>();
+            CreateMap<ConsultaAtualizarDto, Consulta>()
+                .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
 
             CreateMap<PacienteAdicionarDto, Paciente>();
 
