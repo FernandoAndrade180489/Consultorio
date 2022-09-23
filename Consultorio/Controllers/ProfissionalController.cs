@@ -95,5 +95,45 @@ namespace Consultorio.Controllers
                 : BadRequest("Erro ao remover profissional");
         }
 
+        [HttpPost("adicionar-especialidade")]
+        public async Task<IActionResult> PostProfissionalEspecialidade(ProfissionalEspecialidadeAdicionarDto profissional)
+        {
+            int profissionalId = profissional.ProfissionalId;
+            int especialidadeId = profissional.EspecialidadeId;
+
+            if (profissionalId <= 0 || especialidadeId <= 0) return BadRequest("Dados inválidos");
+
+            var profissionalEspecialidade = await _repository.GetProfissionalEspecialidade(profissionalId, especialidadeId);
+
+            if (profissionalEspecialidade != null) return Ok("Especialidade já cadastrada para o profissional");
+
+            var especialidadeAdicionar = new ProfissionalEspecialidade
+            {
+                ProfissionalId = profissionalId,
+                EspecialidadeId = especialidadeId,
+            };
+
+            _repository.Add(especialidadeAdicionar);
+
+            return await _repository.SaveChangesAsync()
+               ? Ok("Especialidade adicionada com sucesso")
+               : BadRequest("Erro ao adicionar especialidade ao profissional");
+        }
+
+        [HttpDelete("{profissionalId}/deletar-especialidade/{especialidadeId}")]
+        public async Task<IActionResult> DeleteProfissionalEspecialidade(int profissionalId, int especialidadeId)
+        {
+            if (profissionalId <= 0 || especialidadeId <= 0) return BadRequest("Dados inválidos");
+
+            var profissionalEspecialidade = await _repository.GetProfissionalEspecialidade(profissionalId, especialidadeId);
+
+            if (profissionalEspecialidade == null) return NotFound("Especialidade não encontrada para o profissional selecionado");
+
+            _repository.Delete(profissionalEspecialidade);
+
+            return await _repository.SaveChangesAsync()
+               ? Ok("Especialidade removida do profissional")
+               : BadRequest("Erro ao remover especialidade do profissional");
+        }
     }
 }
