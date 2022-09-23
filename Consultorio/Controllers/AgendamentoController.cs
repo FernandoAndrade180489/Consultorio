@@ -24,9 +24,9 @@ namespace Consultorio.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]ConsultaParams parametros)
         {
-            var consultas = await _repository.GetConsultas();
+            var consultas = await _repository.GetConsultas(parametros);
 
             var consultasRetorno = _mapper.Map<IEnumerable<ConsultaDetalhesDto>>(consultas);
             return consultasRetorno.Any()
