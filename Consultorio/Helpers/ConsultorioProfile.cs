@@ -13,6 +13,7 @@ namespace Consultorio.Helpers
             CreateMap<Paciente, PacienteDetalhesDto>()
                 .ReverseMap(); // Faz o mapeamento de modo reverso também.
                                // ForMember(dest => dest.Email, opt => opt.Ignore()); // retornará o email null
+            CreateMap<Paciente, PacienteDto>();
 
             CreateMap<ConsultaDto, Consulta>()
                 .ForMember(dest => dest.Profissional, opt => opt.Ignore())
@@ -21,6 +22,8 @@ namespace Consultorio.Helpers
             CreateMap<Consulta, ConsultaDto>()
                 .ForMember(dest => dest.Especialidade, opt => opt.MapFrom(src => src.Especialidade.Nome))
                 .ForMember(dest => dest.Profissional, opt => opt.MapFrom(src => src.Profissional.Nome));
+
+            CreateMap<Consulta, ConsultaDetalhesDto>();
 
             CreateMap<PacienteAdicionarDto, Paciente>();
 
@@ -40,6 +43,7 @@ namespace Consultorio.Helpers
                 .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null)); // Fazer o mapeamento apenas se os membros forem diferentes de null e mantém os nulos
 
             CreateMap<Especialidade, EspecialidadeDetalhesDto>();
+            CreateMap<Especialidade, EspecialidadeDto>();
         
         }
     }

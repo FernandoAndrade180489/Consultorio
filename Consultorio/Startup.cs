@@ -44,6 +44,7 @@ namespace Consultorio
             services.AddScoped<IPacienteRepository, PacienteRepository>();
             services.AddScoped<IProfissionalRepository, ProfissionalRepository>();
             services.AddScoped<IEspecialidadeRepository, EspecialidadeRepository>();
+            services.AddScoped<IConsultaRepository, ConsultaRepository>();
 
             services.AddDbContext<ConsultorioContext>(options =>
             {
