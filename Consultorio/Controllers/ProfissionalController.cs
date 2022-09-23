@@ -31,7 +31,7 @@ namespace Consultorio.Controllers
                 : NotFound("Profissionais não encontrados");
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
             if (id <= 0) return BadRequest("Profissional inválido");
@@ -61,7 +61,7 @@ namespace Consultorio.Controllers
                 : BadRequest("Erro ao adicionar profissional");
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, ProfissionalAtualizarDto profissional)
         {
             if (id <= 0) return BadRequest("Profissional inválido");

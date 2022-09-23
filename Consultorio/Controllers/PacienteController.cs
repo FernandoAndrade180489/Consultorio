@@ -59,6 +59,8 @@ namespace Consultorio.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(PacienteAdicionarDto paciente)
         {
+            // if (!ModelState.IsValid) return BadRequest("Model State Inválida");
+
             if (paciente == null) return BadRequest("Dados Inválidos");
 
             var pacienteAdicionar = _mapper.Map<Paciente>(paciente);
