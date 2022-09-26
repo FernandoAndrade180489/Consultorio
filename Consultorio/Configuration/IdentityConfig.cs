@@ -1,5 +1,6 @@
 ﻿
 using Consultorio.Context;
+using Consultorio.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,7 @@ namespace Consultorio.Configuration
             services.AddDefaultIdentity<IdentityUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddErrorDescriber<IdentityMensagensPortugues>()
                 .AddDefaultTokenProviders();
 
             return services;
