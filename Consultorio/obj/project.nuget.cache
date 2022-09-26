@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8Ck5bMleGAjke3sfewwPzecOAb4Dt2ztCklkefvXS/jBGTPJnsPQGs4ro8ZTV+a/OYEBxseOS/Ba1FwFv2F9mA==",
+  "dgSpecHash": "0qiImJE7iOsCG4rotsZl5z2RQ3jp2bm0RSyVY30Laiwlo2uCNdGIFSDB14h7vYinTLPzI4jlxhtpqAky3zmkDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\fernando.andrade\\Documents\\Projects\\Consultorio\\Consultorio\\Consultorio.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.10\\microsoft.aspnetcore.cryptography.keyderivation.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.10.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\5.0.10\\microsoft.aspnetcore.identity.ui.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.10\\microsoft.aspnetcore.jsonpatch.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.10\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -36,6 +37,8 @@
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\5.0.10\\microsoft.extensions.fileproviders.embedded.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.10\\microsoft.extensions.identity.core.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.10\\microsoft.extensions.identity.stores.5.0.10.nupkg.sha512",
     "C:\\Users\\fernando.andrade\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",

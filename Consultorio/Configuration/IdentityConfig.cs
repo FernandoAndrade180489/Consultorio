@@ -1,5 +1,6 @@
 ﻿
 using Consultorio.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,12 @@ namespace Consultorio.Configuration
             {
                 options.UseNpgsql(configuration.GetConnectionString("Default"));
             });
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             return services;
         }
     }

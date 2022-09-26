@@ -87,6 +87,8 @@ namespace Consultorio
                     .AllowAnyHeader()
                 );
 
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
