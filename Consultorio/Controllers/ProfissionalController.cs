@@ -2,13 +2,15 @@
 using Consultorio.Models.Dtos;
 using Consultorio.Models.Entities;
 using Consultorio.Repository.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Consultorio.Controllers
-{
+{    
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class ProfissionalController : ControllerBase
     {
@@ -21,6 +23,7 @@ namespace Consultorio.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Get()
         {

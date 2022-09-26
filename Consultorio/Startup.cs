@@ -1,3 +1,4 @@
+using Consultorio.Configuration;
 using Consultorio.Context;
 using Consultorio.Repository;
 using Consultorio.Repository.Interfaces;
@@ -36,6 +37,9 @@ namespace Consultorio
             services.AddControllers().AddNewtonsoftJson(options => {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
+
+            // Extende o IServiceCollection em IdentityConfig para configurar o Identity em um arquivo separado da Startup  
+            services.AddIdentityConfiguration(Configuration);
 
             // registrando a injeção de dependência no Scopo da aplicação
             services.AddAutoMapper(typeof(Startup));
