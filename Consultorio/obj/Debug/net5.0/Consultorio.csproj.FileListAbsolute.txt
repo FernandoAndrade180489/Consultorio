@@ -120,3 +120,8 @@ C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\n
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Consultorio.StaticWebAssets.xml
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\fernando.andrade\Documents\Projects\Consultorio\Consultorio\obj\Debug\net5.0\staticwebassets\Consultorio.StaticWebAssets.xml
